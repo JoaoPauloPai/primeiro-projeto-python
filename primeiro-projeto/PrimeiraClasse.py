@@ -1,0 +1,9 @@
+a = 6
+b = 4
+soma = a + b 
+print('O valor de a + b = :',soma,'.')
+
+if soma == 10 :
+    print('A soma é igual a 10!')
+else:
+    print('A soma é diferente de 10')
