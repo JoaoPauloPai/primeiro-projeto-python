@@ -7,3 +7,6 @@ if soma == 10 :
     print('A soma é igual a 10!')
 else:
     print('A soma é diferente de 10')
+print('Condição FOR')
+for n in range(5):
+    print('n:',n)
