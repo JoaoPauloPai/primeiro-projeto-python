@@ -1,6 +1,6 @@
-import pandas as pd
 
-# passo a passo para a solução
+
+# passo a passo para a solutes
 # abrir os arquivos em exel
 # para cada arquivo verficar na coluna vendas 
 # se for maior que 55 mil enviar um sms 
