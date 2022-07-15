@@ -1,12 +1,11 @@
 import pandas as pd
 import win32com.client as win32
 
-
 #passo a paaso para a solução
 #abrir os 6 arquivos em excel
-# para cada arquivo :
+#para cada arquivo :
 #verificar se algum valor na coluna vendas naquele arquivo é maior que 55.000
-# se for maior que 55.00 envia um sms com o nome mes e as vendas do vendedor
+#se for maior que 55.00 envia um sms com o nome mes e as vendas do vendedor
 
 tabela_vendas = pd.read_excel('Vendas.xlsx')
 
@@ -27,26 +26,25 @@ print('*' * 50)
 print('Ticker Médio por Loja')
 print(ticket_medio)
 
-# enviar um email com o relatório
+#enviar um email com o relatório
 outlook = win32.Dispatch('outlook.application')
 mail = outlook.CreateItem(0)
 mail.To = 'joaopaulopai99@gmail.com'
 mail.Subject = 'Relatório de Vendas por Loja'
 mail.HTMLBody = f'''
+
 <p>Prezados,</p>
 
 <p>Segue o Relatório de Vendas por cada Loja.</p>
-<p>Faturamento:</p>
-{faturamento.to_html(formatters={'Valor Final': 'R${:,.2f}'.format})}  
 
-Quantidade:
+<p>Faturamento:</p>
+
+<p>Quantidade:</p>
+
+<p>Ticket Médio:</p>
+
 '''
 
-
-
-
-
-
-
-
 mail.Send()
+
+print("Email enviado com sucesso")
