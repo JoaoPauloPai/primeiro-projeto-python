@@ -3,7 +3,7 @@ a = 5
 b = 4
 soma = a + b
 print(soma)
-
+#função
 a = b = 4
 soma = a + b
 print('O valor de a + b = :',soma,'.')
