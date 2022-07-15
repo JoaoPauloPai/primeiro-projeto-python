@@ -1,6 +1,11 @@
-a = 6
+print('projeto-c em Pytho')
+a = 5
 b = 4
-soma = a + b 
+soma = a + b
+print(soma)
+
+a = b = 4
+soma = a + b
 print('O valor de a + b = :',soma,'.')
 
 if soma == 10 :
