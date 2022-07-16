@@ -22,6 +22,7 @@ print(quantidade)
 
 ticket_medio = (faturamento['Valor Final'] / quantidade['Quantidade']).to_frame()
 ticket_medio = ticket_medio.rename(columns={0: 'Ticket Médio'})
+
 print('*' * 50)
 print('Ticker Médio por Loja')
 print(ticket_medio)
@@ -32,17 +33,22 @@ mail = outlook.CreateItem(0)
 mail.To = 'joaopaulopai99@gmail.com'
 mail.Subject = 'Relatório de Vendas por Loja'
 mail.HTMLBody = f'''
-
 <p>Prezados,</p>
 
 <p>Segue o Relatório de Vendas por cada Loja.</p>
 
 <p>Faturamento:</p>
+{faturamento.to_html(formatters={'Valor Final':'R$ {:,.2f}'.format})}
+
 
 <p>Quantidade:</p>
+{quantidade.to_html()}
 
 <p>Ticket Médio:</p>
+{ticket_medio.to_html(formatters={'Ticket Médio': 'R$ {:,.2f}'.format})}
 
+<p>Atenciosamente:</p>
+<p>João Paulo Gomes da Silva</p>
 '''
 
 mail.Send()
