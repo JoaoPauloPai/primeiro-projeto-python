@@ -14,7 +14,7 @@ pd.set_option('display.max_columns', None)
 faturamento = tabela_vendas[['ID Loja', 'Valor Final']].groupby('ID Loja').sum()
 print('Faturamento de todas as Lojas')
 print(faturamento)
-
+#Atualizando
 quantidade = tabela_vendas[['ID Loja', 'Quantidade']].groupby('ID Loja').sum()
 print('*' * 50)
 print('Quantidade de Produtos por Loja')
