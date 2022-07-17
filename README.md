@@ -1,4 +1,3 @@
-# primeiro-projeto-python
 ## Começando com o Python
 ### projeto - a
 instalar bibliotecas 
